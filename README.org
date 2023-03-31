@@ -1,0 +1,26 @@
+Hackathon Spring 2023
+
+* Theme
+Sustainability (make something about sustainability: carbon emissions, recycling, etc)
+
+* Question
+What is an issue wrt sustainability? Littering
+How are you fixing it? Video game :)
+
+* Idea
+Gamifying recycling
+Identifying carbon emissions of user
+Malware to kill bitcoin miners
+CO2 detector (PPM) - depends on what hardware we have
+Public-appendable database of locations with high litter concentrations
+
+Gacha/PokeGo hybrid w/ the geotagging db - approved
+- Points for taking pictures of recycling/throwing away litter (partially held in escrow until verified)
+- Points for verifying the above pictures from people NOT on your friends list
+- Points for finding spots w/ a lot of litter + points for other people verifying it
+- Points for verifying above spots
+- Points for watching Greenpeace et al ads
+- Points for donating to environmental orgs
+- Using points for gacha rolls/cosmetics
+- Daily/Weekly/Monthly/etc leaderboards
+- Random events (most litter picked up within next 3hr or w/e)
