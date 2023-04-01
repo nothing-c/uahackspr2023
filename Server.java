@@ -2,11 +2,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Server
 {
+	public ArrayList<Integer> totalUsers = new ArrayList<Integer>();
+	public ArrayList<Integer> onlineUsers = new ArrayList<Integer>();
+	public ArrayList<Integer> locations = new ArrayList<Integer>();
+	public int UID;
+
 	//Method for Creating and checking username
 	public static void createUser(ArrayList<Integer> totalUsers){
 		System.out.println("Enter Username: ");
 		Scanner scnr = new Scanner(System.in);
-		int UID = scnr.nextInt();
+		//int UID = scnr.nextInt();
 
 		while (totalUsers.lastIndexOf(UID) != -1)
 		{
@@ -16,19 +21,18 @@ public class Server
 		totalUsers.add(UID);
 
 	}
-	
+	/*
 	public static void main(String[] args) 
     {
 		//Creating totalUsers
-		ArrayList<Integer> totalUsers = new ArrayList<Integer>();
+		
 		System.out.println(totalUsers);
 
 		//Creating onlineUsers
-		ArrayList<Integer> onlineUsers = new ArrayList<Integer>();
+		
 		System.out.println(onlineUsers);
 
 		//Creating Locations
-		ArrayList<Integer> locations = new ArrayList<Integer>();
 		System.out.println(locations);
 
 		//UID TESTING
@@ -39,5 +43,5 @@ public class Server
 		createUser(totalUsers);
 
 		System.out.println(totalUsers);
-	}
+	}*/
 }
