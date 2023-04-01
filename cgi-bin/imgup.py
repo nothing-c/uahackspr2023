@@ -1,4 +1,4 @@
-import cgi
+import cgi, os
 import cgitb;cgitb.enable()
 #TODO this doesn't work
 print("Content-Type: text/html");print()#headers
@@ -78,16 +78,24 @@ print("""<html><title>Upload Recycling Proof</title>
     <div class="parent">
       <img class="green" src="/img/green.png" />
       <img class="beige" src="/img/beige.png" />
-<div class="roll"><h1>Upload proof of garbage disposal:</h1><input type="file" name="upload" accept="image/*"><input type="submit" value="Upload"></div>
+<div class="roll"><h1>Upload proof of garbage disposal:</h1>
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="filename" accept="image/*">
+<input type="submit" value="Upload"></div>
       <a href="/cgi-bin/gacha.py"><img class="button1" src="/img/image_upload.png" /><a>
       <a href="../Profile.html"><img class="button2" src="/img/Profile.png" /><a>
-      <a href="../Image_verification.html"><img class="button3" src="/img/image_verification.png" /><a>
+      <a href="/cgi-bin/imgver.py"><img class="button3" src="/img/image_verification.png" /><a>
       <a href=""><img class="button4" src="/img/gacha_wheel.png" /><a>
     </div>
   </body>
 </html>
 """)
-f=cgi.FieldStorage();#i=f['file']
+file=cgi.FieldStorage()
+fileitem=file['filename']
+if fileitem.filename:
+    fn = os.path.basename(fileitem.filename)
+    open("C:/Users/lightning/Documents/program/hackathon-spring-23/verimg/"+fn, 'wb').write(fileitem.file.read())
+    print("foo")
 
 
 
