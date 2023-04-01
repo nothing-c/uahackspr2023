@@ -6,6 +6,7 @@ public class User {
     public int gacha_roll_tokens_held;
     public int UID;
     public String username;
+    public String[] friends_list;
 
     public void setNumPoints(int ph) 
     {
@@ -37,6 +38,11 @@ public class User {
         username = usrnm;
     }
 
+    public void setFriendsList(String[] fl)
+    {
+        friends_list = fl;
+    }
+
 //--------------------------------------------------------
 
     public int getNumPoints() 
@@ -54,7 +60,7 @@ public class User {
         return gacha_num_held;
     }
 
-    public int setRollTokensHeld() 
+    public int getRollTokensHeld() 
     {
         return gacha_roll_tokens_held;
     }
@@ -67,6 +73,11 @@ public class User {
     public String getUsername() 
     {
         return username;
+    }
+
+    public String[] getFriendsList()
+    {
+        return friends_list;
     }
 
 }
