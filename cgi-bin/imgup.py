@@ -1,23 +1,9 @@
-import random as R
 import cgi
 import cgitb;cgitb.enable()
-class jpg:
-    def __init__(self,t,i,n,l):
-        self.tier=t;self.id=i;self.name=n;self.link=l #link to download pic
-TL=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4]
-TN=["Junk","Green","Conservationist","Naturalist","Ecologist"] #you got a {} tier!
-junk=[jpg(0,0,"Can","/img/j1.jpg"),jpg(0,1,"Newspaper","/img/j2.jpg")]
-green=[jpg(1,2,"Gardener","/img/g1.jpg")]
-cons=[jpg(2,3,"Aristotle","/img/c1.jpg"),jpg(2,7,"Marjorie Stoneman Douglas","/img/c2.jpg")]
-nat=[jpg(3,4,"Charles Darwin","/img/n1.jpg"),jpg(3,6,"Henry David Thoreau","/img/n2.jpg")]
-eco=[jpg(4,5,"David Attenborough","/img/e1.jpg")]
-J=[junk,green,cons,nat,eco]
-def roll():
-    x=R.randint(0,99);y=R.randint(0,len(J[TL[x]])-1);return J[TL[x]][y]
-j=roll()#;f=open("gacha.html","r");l=f.readlines()
+#TODO this doesn't work
 print("Content-Type: text/html");print()#headers
-print("<html><title>Gacha!</title>")
-print(""" <head>
+print("""<html><title>Upload Recycling Proof</title>
+  <head>
     <title>Title of the document</title>
     <style>
       .parent {
@@ -85,22 +71,23 @@ print(""" <head>
         width: 360px;
         border-radius: 0px;
       }
-.roll { position: absolute; top: 10px; left: 500px; width: 800px; }
-
+.roll { position: absolute; top: 10px; left: 500px; width: 500px; }
     </style>
   </head>
   <body>
     <div class="parent">
       <img class="green" src="/img/green.png" />
-      <img class="beige" src="/img/beige.png" />""")
-print(f"<div class=\"roll\"><h1>{TN[j.tier]}-Tier</h1>\n<h2>{j.name}</h2> <h3>#{j.id}</h3><img class=\"fit-picture\" src=\"{j.link}\">\n</div>")
-print("""
+      <img class="beige" src="/img/beige.png" />
+<div class="roll"><h1>Upload proof of garbage disposal:</h1><input type="file" name="upload" accept="image/*"><input type="submit" value="Upload"></div>
       <a href="/cgi-bin/gacha.py"><img class="button1" src="/img/image_upload.png" /><a>
       <a href="../Profile.html"><img class="button2" src="/img/Profile.png" /><a>
-      <a href="/cgi-bin/imgup.py"><img class="button3" src="/img/image_verification.png" /><a>
+      <a href="../Image_verification.html"><img class="button3" src="/img/image_verification.png" /><a>
       <a href=""><img class="button4" src="/img/gacha_wheel.png" /><a>
     </div>
-  </body>""")
+  </body>
+</html>
+""")
+f=cgi.FieldStorage();#i=f['file']
 
-print("</html>")
+
 
