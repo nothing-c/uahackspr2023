@@ -15,7 +15,7 @@ public class gacha {
     private static int[] t = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4};
     //roll, get which tier, roll again for which jpg in tier, return jpg
     public static jpg roll(){Random r=new Random();int x=r.nextInt(100);int y=r.nextInt(j[t[x]].length);return j[t[x]][y];}
-    public static void main(String[] args){for(int i=0;i<100;i++){System.out.println("Roll: "+roll());}}
+    //public static void main(String[] args){for(int i=0;i<100;i++){System.out.println("Roll: "+roll());}}
 }
 
 class info {
