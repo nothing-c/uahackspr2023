@@ -1,13 +1,13 @@
 //Creating a public class with Latitude, Longitude, and UID
 public class Coordinates {
-    private double Latitude;
-    private double Longitude;
-    private long UID;
+    private Double Latitude;
+    private Double Longitude;
+    private Long UID;
 
     public Coordinates() {
-        Latitude = 0;
-        Longitude = 0;
-        UID = 0;
+        Latitude = 0.0;
+        Longitude = 0.0;
+        UID = 0L;
     }
 
     public Coordinates(double La, double Lo, long ID) {
@@ -35,6 +35,7 @@ public class Coordinates {
     public long getUID() {
         return UID;
     }
+    public String toString(){return UID.toString()+","+Latitude.toString()+","+Longitude.toString();}
 
     
 }
