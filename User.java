@@ -5,14 +5,21 @@ import java.util.Scanner;
 
 public class User {
 
-    public static void main(String args[]) throws FileNotFoundException {
+    public int points_held;
+    public int points_in_escrow;
+    public int gacha_num_held;
+    public int gacha_roll_tokens_held;
+    public int UID;
+    
+    public User(int ph,int pie, int gnh, int grth, int id) {
+        this.points_held=ph;
+        this.points_in_escrow=pie;
+        this.gacha_num_held=gnh;
+        this.gacha_roll_tokens_held=grth;
+        this.UID=id;
+    }
+     public void main(String args[]) throws FileNotFoundException {
         
-        int points_held;
-        int points_in_escrow;
-        int gacha_num_held;
-        int gacha_roll_tokens_held;
-        int UID;
-
         String[] friendlist = new String[50];
 
         // Reading file
@@ -24,18 +31,11 @@ public class User {
         Scanner scnr_friend = new Scanner(user_friends);
 
         // Reading each line
-        
         points_held = scnr_stats.nextInt();
         points_in_escrow = scnr_stats.nextInt();
         gacha_num_held = scnr_stats.nextInt();
         gacha_roll_tokens_held = scnr_stats.nextInt();
         UID = scnr_stats.nextInt();
-
-        //System.out.println(points_held);
-        //System.out.println(points_in_escrow);
-        //System.out.println(gacha_num_held);
-        //System.out.println(gacha_roll_tokens_held);
-        //System.out.println(UID);
 
         String line = "";
         int count = 0;
@@ -45,9 +45,8 @@ public class User {
             count++;
         }      
 
-        //for (int i = 0; i < friendlist.length; i++) {
-          //  System.out.println(friendlist[i]);
         }
+        
     }
 
 
